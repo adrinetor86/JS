@@ -1,0 +1,63 @@
+#padre{
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+body{
+
+    background-image: url("../Infierno.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/*#contenedor{*/
+
+/*    height: 300px;*/
+/*    justify-content: center;*/
+/*    display: flex;*/
+/*    height: auto;*/
+/*    background-color: gray;*/
+/*    padding: 50px;*/
+/*    padding-bottom: 70px;*/
+/*    padding-top: 70px;*/
+/*}*/
+
+.formulario{
+    border-radius: 8px;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+ /*background-color: gray;*/
+    background: linear-gradient(180deg, rgba(255,25,0,1) 21%, rgba(233,217,0,1) 37%, rgba(228,255,0,1) 66%, rgba(255,0,0,1) 94%);
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+.formulario input:not(#aceptar){
+    margin-bottom:25px ;
+    padding: 7px;
+    width: 180px;
+    opacity: 85%;
+  }
+ label{
+     font-size: 16px;
+     font-weight: bold;
+ }
+button{
+    border-radius:10px;
+    border: none;
+    color: black;
+   // background-color: black;
+    padding: 10px;
+    width: 140px;
+}
+button:hover{
+   cursor: pointer
+}

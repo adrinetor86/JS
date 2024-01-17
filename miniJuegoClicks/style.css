@@ -1,0 +1,148 @@
+
+.jugadores {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.jugador {
+    background: lightgoldenrodyellow;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.areas, .contadores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.area1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border-radius: 8px;
+    font-size: 5em;
+}
+
+.area2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: lightcoral;
+    border-radius: 8px;
+    font-size: 5em;
+}
+
+.contadores > :nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background: lightgray;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contadores > :nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background: lightgray;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.addJugador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addJugador *{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  
+   
+}
+.resumen {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botones button {
+    margin: 5px;
+}
+.tiempo{
+    background-color: rgb(255, 166, 0);
+    padding: 20px;
+    font-size: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+}
+
+#nuevoJugador{
+background-color:#8fe6b8;
+border: none;
+border-radius: 10px;
+padding: 10px;
+}
+#iniciaJuego{
+    background-color: #79ddff;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#ponMusica{
+    background-color: #fbbb76;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+.divAñadir{
+    align-self: center;
+    justify-self: center;
+    margin-top:20px;
+     margin-left: auto;
+    margin-right: auto; 
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    border: 1px solid black;
+    gap:5px;
+    background-color: rgb(116, 217, 243);
+}
+
+.divAñadir input{
+    background-color: #d1f4fc;
+    padding: 5px;
+    border:none;
+    border-radius: 10px;
+}
+
+.body{
+    background-image: url("https://media.tenor.com/HaxFI-MpgJEAAAAC/el-primo-dance.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

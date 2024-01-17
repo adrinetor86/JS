@@ -1,0 +1,28 @@
+button{
+    background-color: rgb(8, 253, 253);
+    padding:50px;
+    padding-left:80px;
+    padding-right:80px;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: rgb(18, 149, 236);
+    color: aliceblue;
+}
+#problema{
+ justify-self: start;
+}
+/* #error{
+    width: 20px;
+    height: 20px;
+} */
+.reparacion{
+    display: grid;
+    grid-template-columns: 20px 200px;
+    gap: 20px;
+    justify-content: start;
+    align-items: start;
+}

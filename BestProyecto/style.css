@@ -1,0 +1,37 @@
+body{
+    background-color: #e1d2c3;
+}
+
+#contenedor{
+    border: 1px solid black;
+    width: auto;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
+#contenedor div{
+
+    gap:20px;
+    padding: 70px;
+    justify-content: end;
+}
+#contenedor-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.div-1{
+    background-color: #d2cffa;
+}
+
+#contenedor-2 div{
+    background-color: #d2cffa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

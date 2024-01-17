@@ -1,0 +1,143 @@
+body{
+background-color: rgb(0, 0, 0);
+ }   
+
+ #planeta div{
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/020/922/034/small/isolated-realistic-jupiter-illustration-png.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1020px;
+    height: 1040px;
+    rotate: 63deg;
+    border-radius: 50%;
+    animation: girar 20s infinite linear;
+    z-index: -2;
+    position: absolute;
+
+ } 
+
+ @keyframes girar {
+    from { transform: rotate(-20deg)  translate(-1500px) rotate(334deg); }
+    to { transform: rotate(360deg) translate(600px) rotate(-360deg); }
+ }
+h1{
+    color:white;
+}
+th{
+    Color:white;
+    padding: 10px;
+    background-color: rgb(0, 255, 204);
+    border: 1px solid black;
+}
+th:first-child{
+    color:rgb(0, 0, 0);
+}
+th:nth-child(2){
+    color:rgb(0, 128, 255);
+}
+th:nth-child(3){
+    color:red;
+}
+th:nth-child(4){
+    color:gold;
+}
+td{
+    background-color: rgb(53, 232, 238);
+    border: 1px solid black;
+    padding: 10px;
+}
+#resultado {
+    z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+#contenedorComienzo{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+#comienzo{
+    z-index: 1;
+    background-color: #ff8400;
+    border:none;
+    padding: 25px;
+    border-radius: 10px;
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  font-size: large;
+  cursor: pointer;
+}
+#cargarHistorico{
+    background-color: rgb(255, 132, 0);
+    font-size: larger;
+    color:white;
+    border:none;
+    border-radius: 25px;
+    padding: 10px;
+}
+#cargarHistorico:hover{
+    cursor: pointer;
+    animation: cambioColor 2s infinite;
+    /* transform: rotate(2deg); */
+}
+@keyframes cambioColor{
+    0%{
+        transform: rotate(5deg);
+    }50%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+#heroe{
+    z-index: 1;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+#villano{
+    z-index: 1;
+    background-color: #E74C3C;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%;
+}
+#resultado{
+    z-index: 1;
+    z-index: 1;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+#round{
+    z-index: 1;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#ganador {
+    z-index: 1;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+img {
+    align-items: center;
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-right:200px;
+}

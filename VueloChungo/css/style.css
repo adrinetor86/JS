@@ -1,0 +1,105 @@
+header{
+    background-color: #4CAF50;
+    grid-area: cabecera;
+    font-size: x-large;
+}
+header ul{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.logo{
+    height: 100px;
+}
+.logo img{
+    width: 130%;
+  height: 130%;
+}
+
+main{
+    grid-area: cuerpo;
+    background-color: #6f8ff8;
+}
+footer{
+    grid-area: pie;
+    background-color: #d2cffa;
+}
+
+
+
+#contenedor{
+
+    display: grid;
+    grid-template-rows: 160px 1800px 200px;
+    grid-template-columns: 0 100%;
+
+    grid-template-areas: "cabecera cabecera cabecera"
+                          "cuerpo cuerpo cuerpo"
+                              "pie pie pie";
+}
+main div{
+    display: flex;
+}
+#contenedor-viajes{
+    display: grid;
+    grid-template-columns: 200px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+#ModoBusqueda {
+    display: flex;
+    padding-top: 15px;
+    justify-content: center;
+    gap:40px;
+}
+#ModoBusqueda button{
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    border: none;
+}
+.icono-pie{
+    height: 40px;
+    width: 40px;
+}
+.lista-pie{
+    list-style: none;
+    display: inline-flex;
+}
+.Clase-formulario{
+    display: grid;
+    background-color: #5bb8f3;
+    grid-template-columns: 180px;
+    justify-content: center;
+    border:1px solid;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap:15px;
+    padding-bottom: 50px;
+}
+#padre-formulario{
+    padding-top: 60px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+#contenedor-viajes button{
+    margin: 5px;
+    padding: 10px;
+    border:none;
+    border-radius: 20px;
+}
+
+select{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: medium;
+}
+option{
+    font-size: medium;
+    border: 3px solid black;
+}

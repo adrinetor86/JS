@@ -1,0 +1,37 @@
+body{
+    /*background-image: url("../Pringado.jpg");*/
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+}
+
+#padre{
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.formulario{
+    border-radius: 8px;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+    background-color: #92cace;
+
+ /*background: linear-gradient(180deg, rgba(255,25,0,1) 21%, rgba(233,217,0,1) 37%, rgba(228,255,0,1) 66%, rgba(255,0,0,1) 94%);*/
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+button{
+    padding: 6px;
+    margin-bottom: 10px;
+}

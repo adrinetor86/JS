@@ -7,9 +7,9 @@ let preguntas =[
         pregunta:"Fumas sustancias estupefacientes?",
         respuestas:
             [
-            {respuesta:"Uno al año no hace daño",puntos:20},
+            {respuesta:"Uno al año no hace daño",personaje:'MAXI',puntos:20},
             {respuesta:"Nunca",puntos:10},
-            {respuesta:"Siempre",puntos:30},
+            {respuesta:"Siempre",personaje:'COKE',puntos:30},
             {respuesta:"De vez en cuando",puntos:10},
             ]
     },

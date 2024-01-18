@@ -6,9 +6,22 @@
     align-items: center;
 }
 
+
+@font-face {
+    font-family: "LQSA";
+    src: url("STOMPER Regular.ttf");, format("TrueType"),
+
+}
+
+.titulo{
+    font-family: LQSA;
+    font-size: xx-large;
+    font-weight: bold;
+}
 h2{
     color: #cccc4e;
     text-align: center;
+
 }
 #formulario{
 

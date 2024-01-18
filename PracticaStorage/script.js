@@ -1,4 +1,7 @@
 
+
+//LOCAL SE GUARDA EN NAVEGADOR, AUNQUE CIERRE PAGINA EXISTE
+//SESION PERMANECE SOLAMENTE MIENTRAS ESTE ABIERTO EL NAVEGADOR
 let miLocal =document.getElementById("local")
 localStorage.setItem("nombre", "ElRalf");
 miLocal.innerText=localStorage.getItem("nombre");

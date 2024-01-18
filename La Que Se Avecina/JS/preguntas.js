@@ -1,80 +1,98 @@
 import preguntas from './JSONpreguntas.js';
 
 let formulario=document.getElementById("formulario");
-console.log(preguntas[0].respuestas[0].respuesta);
 
-mostrarRespuestas();
+let numPregunta=0;
 
-function mostrarRespuestas(){
-    let puntos
+let divRespuestas=document.createElement("div");
 
-    for(let i=0;i<preguntas.length-1;i++){
+let imgLogo=document.createElement("img");
+imgLogo.src="../IMG/LQSA.png"
+imgLogo.classList.add("logo");
 
-        let nuevoBoton = document.createElement("button");
-        nuevoBoton.innerHTML = preguntas[i].respuestas[i].respuesta;
-         puntos=preguntas[i].respuestas[i].puntos
+divRespuestas.setAttribute("id","divRespuesta")
 
+    mostrarPregunta(numPregunta);
+    function mostrarPregunta(Pregunta){
 
-        console.log("PUNTOS: "+puntos);
-        nuevoBoton.value = preguntas[i].respuestas[i].personaje;
+        formulario.appendChild(imgLogo)
 
-        formulario.appendChild(nuevoBoton);
-        nuevoBoton.classList.add("respuestas");
+        formulario.appendChild(document.createElement("h2")).innerHTML=preguntas[Pregunta].pregunta;
 
-         console.log(nuevoBoton.value)
+       preguntas[Pregunta].respuestas.forEach(function(element){
 
 
-        nuevoBoton.addEventListener("click",()=>verRespuestas(nuevoBoton.value),preguntas[i].respuestas[i].puntos)
-    }
+           let nuevoBoton=document.createElement("button")
+           nuevoBoton.innerHTML=element.respuesta;
+           nuevoBoton.value=element.personaje;
 
+           divRespuestas.appendChild(nuevoBoton)
 
-}
+           nuevoBoton.addEventListener("click",()=>verRespuestas(nuevoBoton.value,element.puntos));
 
-
-//PUNTOS DA FALLO
-function verRespuestas(personaje,puntos){
-
-    console.log("MI PERSONAJE: "+personaje)
-
-
-
-        let personajes= {
-
-            COKE: 0,
-            RECIO: 0,
-            AMADOR: 0,
-            FERMIN : 0,
-
+        });
+        formulario.appendChild(divRespuestas);
       }
 
-      personajes[personaje]++;
-
-  console.log("PRUEBA PERSONAJE "+personajes[personaje])
-
-}
 
 
-function personajes(){
+numPregunta=0;
+    function verRespuestas(personaje,puntos){
 
-    let personajes=[
+        console.log("MI PERSONAJE: "+personaje)
+
+          persona[personaje]+=puntos;
+
+      console.log("PRUEBA PERSONAJE "+persona[personaje])
+
+        if(numPregunta<preguntas.length-1){
+            numPregunta++;
+            formulario.innerHTML=""
+            divRespuestas.innerHTML=""
+            mostrarPregunta(numPregunta);
+        }else{
 
 
+            formulario.innerHTML=""
 
-    ]
+            divRespuestas.innerHTML=""
+            formulario.appendChild(document.createElement("h3")).innerHTML="CARGANDO PERSONAJE..."
+            formulario.appendChild(document.createElement("div")).setAttribute("class","loader")
+            console.log("dwdwdwd")
 
-}
-function mostrarPreguntas(){
+            setTimeout(mostrarPersonaje,4000)
 
-    for(let i=0;i<preguntas.length;i++) {
-
-    formulario.appendChild(document.createElement("h2")).textContent = preguntas[i].pregunta;
-
-
-
-            formulario.appendChild(document.createElement("h4")).textContent = preguntas[i].respuestas[i].respuesta
-            // formulario[0].childNodes[1].addEventListener("click", ()=>  mostrarRespuestas(i));
-            //   mostrarRespuestas(i)
+        }
 
     }
+
+    function mostrarPersonaje(){
+
+    let puntosMax=0;
+    let personajeElegido='';
+        for (const atributo in persona) {
+
+            if(persona[atributo] > puntosMax ){
+                personajeElegido=atributo;
+                puntosMax=persona[atributo]
+            }
+        }
+        localStorage.setItem("tuPersonaje",personajeElegido);
+        window.location="./resultado.html"
+
+    }
+//OBJETO
+let persona= {
+
+    COKE: 0,
+    RECIO: 0,
+    AMADOR: 0,
+    FERMIN : 0,
+
 }
+
+
+let prueba1=[];
+
+
 

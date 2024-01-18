@@ -7,27 +7,76 @@
 }
 
 
+body{
+    background-image: url("../IMG/montepinar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.personajeEscogido{
+    text-align: center;
+    font-family: LQSA;
+    color:yellow;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 @font-face {
     font-family: "LQSA";
     src: url("STOMPER Regular.ttf");, format("TrueType"),
-
 }
 
 .titulo{
     font-family: LQSA;
     font-size: xx-large;
     font-weight: bold;
+    line-height: 2.6rem;
 }
+
 h2{
     color: #cccc4e;
     text-align: center;
 
 }
-#formulario{
 
+.logo{
     width: 33%;
-    height: 500px;
+}
+
+#formulario{
+    opacity: 90%;
+    border-radius: 15px;
+    width: 450px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 440px;
     background: #3da297;
+}
+img + button{
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #fcfc8c;
+    padding: 20px;
+    border: none;
+    margin: 10px;
+    border-radius: 31px;
+}
+
+
+label{
+    font-size: 1.5rem;
+    font-family: LQSA;
+    margin-top: 1rem;
+}
+
+img + button:hover{
+    cursor: pointer;
+    transform:scale(110%);
+    filter: brightness(130%);
+    border-radius: 20px;
 }
 
 
@@ -36,6 +85,7 @@ h2{
 
 }
 #Datos-Personales{
+    width: 60%;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -45,7 +95,64 @@ h2{
     gap: 15px;
 }
 
+h1 + img{
+    width: 300px;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-family: LQSA;
+
+}
+
+input{
+    text-align: center;
+}
+
 #Boton-Enviar{
+    background-color: #fcfc8c;
     margin-top: 10px;
     padding: 6px;
+    margin-bottom: 1rem;
+    border:none;
 }
+
+#Boton-Enviar:hover{
+    cursor: pointer;
+
+    transform:scale(110%);
+    filter: brightness(130%);
+    border-radius: 8px;
+}
+
+#divRespuesta{
+
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
+    gap: 0px 20px;
+    align-items: center;
+}
+
+#divRespuesta button{
+    font-weight: bold;
+    opacity:1 ;
+    border-radius: 5px;
+    border:none;
+     height: 55px;
+    text-transform: uppercase;
+    transition: 1s;
+    background-color: #ebe39c
+
+}
+
+#divRespuesta button:hover{
+
+    cursor: pointer;
+    transform:scale(110%);
+    filter: brightness(130%);
+    border-radius: 20px;
+}
+

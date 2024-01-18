@@ -1,10 +1,10 @@
 
-
+//ARRAY DE OBJETOS
 let preguntas =[
 
 
     {
-        pregunta:"Fumas sustancias estupefacientes?",
+        pregunta:"¿Fumas sustancias estupefacientes?",
         respuestas:
             [
             {respuesta:"Uno al año no hace daño",personaje:'AMADOR',puntos:20},
@@ -15,7 +15,7 @@ let preguntas =[
     },
 
     {
-        pregunta:"Le pegarias un centollazo al presidente?",
+        pregunta:"¿Le pegarias un centollazo al presidente?",
         respuestas:
             [
                 {respuesta:"Se lo merece el cabron",personaje:'RECIO',puntos:30},
@@ -26,7 +26,7 @@ let preguntas =[
     },
 
     {
-        pregunta:"Cual seria tu oficio?",
+        pregunta:"¿Cual seria tu oficio?",
         respuestas:
             [
                 {respuesta:"Espetero",personaje:'FERMIN',puntos:30},
@@ -36,17 +36,17 @@ let preguntas =[
             ]
     },
     {
-        pregunta:"En tu tiempo libre que haces?",
+        pregunta:"¿En tu tiempo libre que haces?",
         respuestas:
             [
                 {respuesta:"Tomar una caña",personaje:'AMADOR',puntos:30},
                 {respuesta:"Seducir mujeres",personaje:'FERMIN',puntos:30},
-                {respuesta:"Pescadero",personaje:'RECIO',puntos:30},
+                {respuesta:"Salvar España",personaje:'RECIO',puntos:30},
                 {respuesta:"Siesta",personaje:'COKE',puntos:30},
             ]
     },
     {
-        pregunta:"Cual es tu personalidad?",
+        pregunta:"¿Cual es tu personalidad?",
         respuestas:
             [
                 {respuesta:"Animador",personaje:'AMADOR',puntos:30},

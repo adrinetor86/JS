@@ -52,13 +52,10 @@ numPregunta=0;
             mostrarPregunta(numPregunta);
         }else{
 
-
             formulario.innerHTML=""
-
             divRespuestas.innerHTML=""
             formulario.appendChild(document.createElement("h3")).innerHTML="CARGANDO PERSONAJE..."
             formulario.appendChild(document.createElement("div")).setAttribute("class","loader")
-            console.log("dwdwdwd")
 
             setTimeout(mostrarPersonaje,4000)
 

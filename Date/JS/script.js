@@ -8,12 +8,11 @@ let aceptar=document.getElementById("aceptar");
 let botonEntrar=document.getElementById("boton-entrar");
 
 
-botonEntrar.addEventListener("click",comprobarEdad)
-
+    botonEntrar.addEventListener("click",comprobarFormulario)
 
     aceptar.addEventListener("click",comprobarCheck)
-    function comprobarCheck(){
 
+    function comprobarCheck(){
 
        if (aceptar.checked===true){
 
@@ -22,12 +21,31 @@ botonEntrar.addEventListener("click",comprobarEdad)
            botonEntrar.setAttribute('disabled', "true");
        }
 
-
-
     }
 
-// PATTERN NUMERO TELEFONO
-// ^(\+34)?\d{9}$
+
+
+    function comprobarFormulario() {
+        if (comprobarTelefono() && comprobarEdad() && comprobarNombre()) {
+
+
+
+            localStorage.setItem("Valornombre",nombre.value)
+
+            paginaNueva();
+            console.log("TA BUENO MANIN")
+        } else {
+            console.log("TA MAL MANIN")
+        }
+    }
+
+
+let usuario=localStorage.getItem("Valornombre");
+
+if(usuario!==null && usuario!==undefined){
+    console.log("holasdwwd")
+    window.location="./Opcion1.html"
+}
 
 function comprobarEdad(){
     let fechaActual=new Date().getTime();
@@ -35,21 +53,20 @@ function comprobarEdad(){
     const edadMinima =568025136000;
     console.log(fechaActual)
 
-    if(comprobarNombre()===true && fechaActual-nacimiento>=edadMinima){
-        //alert("Tienes acceso para entrar")
-        reproducirMusica()
-        comprobarTelefono()
-        //paginaNueva();
+    if( fechaActual-nacimiento>=edadMinima){
+
+        return true
     }else{
         alert("Vete al chikipark chaval")
+        return false
+
     }
 
-// let nacimiento=fecha.value
-    console.log(nacimiento.getTime())
 }
+
     function comprobarNombre(){
 
-    if(nombre.value!=''){
+    if(nombre.value!==' '){
         return true;
     }else{
         alert("Debes poner tu nombre")
@@ -63,12 +80,15 @@ function comprobarEdad(){
 
     if( strPatern.test(telefono.value)){
         console.log("Esta bien")
-        paginaNueva()
+        return true
     }else{
         alert("Debes meter un telefono valido")
+        return false
     }
 
     }
+
+
     function paginaNueva(){
      //   let fondo= "background-image: url('Fraude.png')";
         window.location ="../HTML/Opcion1.html";

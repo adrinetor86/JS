@@ -19,6 +19,15 @@ botonMitad[0].addEventListener("click",declararMitad)
 
 botonEnviar[0].addEventListener("click",enviarSugerencias);
 
+let botonBorrar=document.createElement("button")
+
+
+botonBorrar.setAttribute("id","botonBorrar");
+
+botonBorrar.style.display="none";
+
+botonBorrar.innerHTML="Volver a rellenar el formulario";
+
 
 
 let titulo=document.querySelector("h1");
@@ -28,8 +37,6 @@ let arrSugerencias=[];
 
 divSucesos.style.display="none";
 
-
-let querySugerencias=document.querySelector("label .opciones_check");
 function enviarSugerencias(){
 
     for(let i=0;i<=inputsSugerencia.length-1;i++){
@@ -45,6 +52,15 @@ function enviarSugerencias(){
 
 }
 
+botonBorrar.addEventListener("click",borrarStrorage)
+function borrarStrorage(){
+
+    localStorage.clear("Valornombre");
+
+    window.location="./index.html"
+}
+
+
 function mostrarSugerenciasEscogidas(){
     divSugerencias.innerHTML="";
 
@@ -54,9 +70,11 @@ function mostrarSugerenciasEscogidas(){
                divSugerencias.appendChild(document.createElement("label")).innerHTML=arrSugerencias[j]+"<br>";
            }
    }else{
+
        divSugerencias.appendChild(document.createElement("label")).innerHTML="No has seleccionado nada."
    }
-
+    botonBorrar.style.display="block"
+formulario[0].appendChild(botonBorrar)
 }
 let cancion=new Audio("../Persecucion.mp3")
 
@@ -130,9 +148,11 @@ let videoRick= document.createElement("video").classList.add="video-rick";
 
         formulario[0].appendChild(document.createElement("video")).classList.add="video-rick";
 
-  formulario[0].childNodes[0].src="../Rick.mp4";
+        formulario[0].childNodes[0].src="../Rick.mp4";
         formulario[0].childNodes[0].autoplay="true";
 
+        botonBorrar.style.display="block"
+        formulario[0].appendChild(botonBorrar)
     }
     function Barcelona(){
     formulario[0].innerHTML=""
@@ -198,11 +218,15 @@ let videoRick= document.createElement("video").classList.add="video-rick";
        formulario[0].childNodes[0].src="../EscoriaVideo.mp4";
        formulario[0].childNodes[0].autoplay="true";
 
+       botonBorrar.style.display="block"
+       formulario[0].appendChild(botonBorrar)
    }
     function perdedor(){
         formulario[0].innerHTML="";
 
         formulario[0].appendChild(document.createElement("h1")).innerHTML="Desgraciadamente Hacienda te descubrio";
+        botonBorrar.style.display="block"
+        formulario[0].appendChild(botonBorrar)
     }
 
 

@@ -19,6 +19,7 @@ divRespuestas.setAttribute("id","divRespuesta")
 
         formulario.appendChild(document.createElement("h2")).innerHTML=preguntas[Pregunta].pregunta;
 
+        //Bucle el cual recorre cada pregunta
        preguntas[Pregunta].respuestas.forEach(function(element){
 
 
@@ -37,6 +38,9 @@ divRespuestas.setAttribute("id","divRespuesta")
 
 
 numPregunta=0;
+
+    //Funcion a la cual se le pasa el personaje
+    // y los puntos de la respuesta que se selecciono
     function verRespuestas(personaje,puntos){
 
         console.log("MI PERSONAJE: "+personaje)
@@ -45,6 +49,8 @@ numPregunta=0;
 
       console.log("PRUEBA PERSONAJE "+persona[personaje])
 
+        //condicion la cual mostrara una nueva pregunta si se ha respondido la anterior
+        //en caso de que no haya mas preguntas, se mostrara el personaje
         if(numPregunta<preguntas.length-1){
             numPregunta++;
             formulario.innerHTML=""
@@ -63,10 +69,13 @@ numPregunta=0;
 
     }
 
+    //Funcion que muestra al personaje que mas puntos tenga
     function mostrarPersonaje(){
 
     let puntosMax=0;
     let personajeElegido='';
+
+        //for que recorre el objeto persona y compara la puntuacion de cada uno
         for (const atributo in persona) {
 
             if(persona[atributo] > puntosMax ){
@@ -78,7 +87,7 @@ numPregunta=0;
         window.location="./resultado.html"
 
     }
-//OBJETO
+//OBJETO persona que
 let persona= {
 
     COKE: 0,
@@ -89,7 +98,7 @@ let persona= {
 }
 
 
-let prueba1=[];
+
 
 
 

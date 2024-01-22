@@ -16,7 +16,7 @@ let botonVolver=document.createElement("button");
 // let imagenPersonaje=document.createElement("img");
 
 botonVolver.innerHTML="Volver a realizar cuestionario ";
-botonVolver.addEventListener("click",borrarStrorage);
+botonVolver.addEventListener("click",borrarStorage);
 
 
 personajeEscogido.innerHTML="ERES "+localStorage.getItem("tuPersonaje");
@@ -25,12 +25,12 @@ personajeEscogido.classList.add("personajeEscogido");
 
 formulario.appendChild(personajeEscogido);
 
- formulario.appendChild(document.createElement("img")).src=imagenesPersonajes[localStorage.getItem("tuPersonaje")];
+formulario.appendChild(document.createElement("img")).src=imagenesPersonajes[localStorage.getItem("tuPersonaje")];
 
 formulario.appendChild(botonVolver);
 
 
-function borrarStrorage(){
+function borrarStorage(){
 
     localStorage.clear("tuPersonaje");
     window.location="./index.html"

@@ -1,68 +1,41 @@
-let miForm=document.getElementById("parrafo");
+let miPromesa=new Promise((resolve ,reject)=> {
+    let suma = 3 + 2
 
-let miDatos=fetch("https://swapi.dev/api/people/1").then();
+    function pruebaSuma() {
+        if (suma > 2222) resolve(`La suma da ${suma}`);
+        else reject("A BUENO TE ME CALMAS CRACK")
+    }
 
-
-
-miForm.addEventListener("click",(e )=>{
-    this.elemento="tres"
-    console.log("hola");
+    setTimeout(()=>{
+        //resolve("Adrian")},2000)
+        resolve(pruebaSuma())},2000)
 })
 
-let var1=2;
-
-function miScope(){
-
-    let var1= 3;
-
-    console.log(var1);
-}
-
-class Hijo{
-
-    constructor() {
-        this.nombre="Adrian";
-        this.apellido="Jacek";
-    }
+miPromesa
+    //then cuando sea resolve
+    .then((resultado)=> {console.log(resultado)})
+    //catch cuando sea reject
+    .catch(function (cagada){
+        console.log(cagada)
+    })
 
 
-    miNombre=()=>{
-
-        return this.nombre;
-    }
-
-    miNombre2() {
-
-        return this.nombre;
-    }
-}
-
-let miHijo=new Hijo()
-
+// function miFunction(){
 //
-// console.log(miHijo.miNombre());
-// console.log(miHijo.miNombre2())
+//       let nombre="Adrian";
+//     return "nombre";
+// }
+ let  miFunction = function(){
 
-let miObjeto={
-
-
-    nombre:"Adrian",
-    miCosa: ()=>{
-        return this.nombre;
-    }
-
-}
+    let nombre="Adrian";
+    console.log(nombre);
+    return nombre;
+ }
 
 
-let miObjeto2={
+setTimeout(miFunction,1000)
 
 
-    nombre:"Adrian2",
-    miCosa: function(){
-        return this.nombre;
-    }
-
-}
-
-console.log(miObjeto.miCosa())
-console.log(miObjeto2.miCosa())
+// .then(function(cosa){
+//
+// })

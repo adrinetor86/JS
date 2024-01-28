@@ -30,7 +30,7 @@ botonBorrar.addEventListener("click",borrarStrorage)
 
 function borrarStrorage(){
 
-    localStorage.clear("Valornombre");
+    localStorage.clear();
 
     window.location="./index.html"
 }

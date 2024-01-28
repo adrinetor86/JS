@@ -52,10 +52,10 @@ function enviarSugerencias(){
 
 }
 
-botonBorrar.addEventListener("click",borrarStrorage)
-function borrarStrorage(){
+botonBorrar.addEventListener("click",borrarStorage)
+function borrarStorage(){
 
-    localStorage.clear("Valornombre");
+    localStorage.clear();
 
     window.location="./index.html"
 }

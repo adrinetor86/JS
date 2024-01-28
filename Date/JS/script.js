@@ -12,6 +12,8 @@ let botonEntrar=document.getElementById("boton-entrar");
 
     aceptar.addEventListener("click",comprobarCheck)
 
+
+    //Funcion que comprueba el si se ha marcado la casilla check
     function comprobarCheck(){
 
        if (aceptar.checked===true){
@@ -23,12 +25,9 @@ let botonEntrar=document.getElementById("boton-entrar");
 
     }
 
-
-
+    //Comprueba si todos los campos tienen el formato correcto
     function comprobarFormulario() {
         if (comprobarTelefono() && comprobarEdad() && comprobarNombre()) {
-
-
 
             localStorage.setItem("Valornombre",nombre.value)
 
@@ -39,14 +38,17 @@ let botonEntrar=document.getElementById("boton-entrar");
         }
     }
 
-
+// parametro que pilla el valor del local storage en caso de que exista
 let usuario=localStorage.getItem("Valornombre");
 
+    //Si existe, te redirige a la pantalla del personaje
 if(usuario!==null && usuario!==undefined){
-    console.log("holasdwwd")
+
     window.location="./Opcion1.html"
 }
 
+
+//Funcion que se encarga de comprobar si la edad es de 18 años o mas
 function comprobarEdad(){
     let fechaActual=new Date().getTime();
     let nacimiento=new Date(fecha.value)
@@ -63,7 +65,7 @@ function comprobarEdad(){
     }
 
 }
-
+//Funcion que se encarga de comprobar el formato del nombre
     function comprobarNombre(){
 
     if(nombre.value!==' '){
@@ -74,7 +76,7 @@ function comprobarEdad(){
     }
 
     }
-
+//Funcion que se encarga de comprobar el formato del telefono
     function comprobarTelefono(){
     let strPatern=/^(\+34)?\d{9}$/
 
@@ -89,6 +91,7 @@ function comprobarEdad(){
     }
 
 
+//Funcion que redirige a una nueva pagina html
     function paginaNueva(){
 
         window.location ="../HTML/Opcion1.html";

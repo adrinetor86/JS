@@ -90,26 +90,9 @@ function comprobarEdad(){
 
 
     function paginaNueva(){
-     //   let fondo= "background-image: url('Fraude.png')";
+
         window.location ="../HTML/Opcion1.html";
-       // window.open("../HTML/Opcion1.html","_self")
+
     }
 
 
-function reproducirMusica(){
-  let cancion= new Audio(getRutaCancion())
-    cancion.play("")
-
-}
-
-
-function getRutaCancion() {
-    const mapaCanciones = {
-        0: 'Birds.mp3',
-        1: 'Himno.mp3',
-
-    };
-    const numAleatorio = Math.floor(Math.random() * Object.keys(mapaCanciones).length);
-
-    return mapaCanciones[numAleatorio];
-}

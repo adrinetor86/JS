@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.nuevaPartida{
+    margin-bottom: 1%;
+}
+
+.lingoBox {
+    display: flex;
+}
+
+.test-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.letterBox {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.correct{
+    background-color: lightgreen;
+}
+
+.incorrect{
+    background-color: lightcoral;
+}
+
+
+/* ¿Y por qué me acordaré de estas cosas...? 
+    Podéis retirar el código de abajo para desactivar el fondo */
+
+body::before{
+    content: "";
+    background-image: url('./200w.webp');
+    width: 100%;
+    height:100%;
+    position:absolute;
+    z-index: -1;
+    opacity:0.02;
+}

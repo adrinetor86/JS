@@ -29,8 +29,8 @@ let API_key="fab39eb2123e1f1999354d978289ff8c";
         //fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${API_key}`)
 
 
-        //fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=${API_key}`)
-    fetch("https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=fab39eb2123e1f1999354d978289ff8c")
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=fab39eb2123e1f1999354d978289ff8c`)
+   // fetch("https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=fab39eb2123e1f1999354d978289ff8c")
             .then((res)=> console.log(res.json()))
 
    // .then((res)=>res.blob())

@@ -1,0 +1,183 @@
+#padre{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(54, 63, 87, 0.76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#btnBuscar{
+margin-top: 20px;
+    padding-left: 50px;
+    padding-right:50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius:6px;
+}
+
+#imagenValor{
+padding-left: 25%;
+
+}
+
+#inputCiudad{
+    margin-top: 7px;
+text-align: center;
+    padding: 5px;
+}
+
+label{
+    letter-spacing: 4px;
+}
+
+#buscador{
+    /*display: grid;*/
+
+}
+
+#contenedor{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 3px 4px black;
+    /*width: 40%;*/
+    width: 400px;
+    height: 50vh;
+    background-color: #0d3349;
+    color:white;
+}
+
+#datos{
+    font-size: 1.3rem;
+    display: flex;
+    /*gap: 75px;*/
+    width: 100%;
+
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    text-align: left;
+}
+
+
+#datos div{
+    display: flex;
+    padding: 20px;
+    /**/
+    flex-flow: column nowrap;
+}
+
+#contenedor img{
+    height: 130px;
+    width: auto;
+
+}
+
+
+/*#divBuscadorNuevo{*/
+/*    background-image: url("img/Lupa2.png");*/
+/*    background-size: contain;*/
+/*    background-repeat: no-repeat;*/
+/*    !*background-color: white;*!*/
+/*    height: 30px;*/
+/*    width: 30px;*/
+/*    border-radius: 100%;*/
+/*}*/
+
+
+/*#div_lupa{*/
+/*    padding-left: 89%;*/
+/*    justify-content: start;*/
+/*}*/
+
+
+/*#divBuscadorNuevo:hover{*/
+
+/*    background-image: none;*/
+/*    border-radius:5px;*/
+/*    width: 200px;*/
+/*    background-color: #E74C3C;*/
+/*    !*transform: translateX(-40px);*!*/
+/*    transition: 1s;*/
+/*    margin-right: 202px;*/
+
+/*}*/
+
+
+@keyframes animacion {
+
+
+}
+
+/*#div_lupa {*/
+/*    display: flex;*/
+
+/*    position: relative;*/
+/*}*/
+#div_lupa  {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 15px;
+    position: relative;
+}
+
+.input {
+    border-style: none;
+    height: 40px;
+    width: 40px;
+    padding: 2px;
+    outline: none;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    background-color: #1557c0;
+    box-shadow: 0px 0px 3px #1557c0;
+    color: #fff;
+}
+
+.input::placeholder,
+.input {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    font-size: 17px;
+
+}
+
+.input::placeholder {
+color: #8f8f8f;
+    /*color: transparent;*/
+}
+
+#divBuscadorNuevo {
+
+    background-image: url("img/Lupa2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+    transition: 0.2s linear;
+}
+
+#divBuscadorNuevo:focus ~ .input,
+.input:focus {
+    box-shadow: none;
+    width: 250px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #1557c0;
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}

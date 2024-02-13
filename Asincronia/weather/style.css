@@ -67,7 +67,7 @@ label{
     justify-content: space-between;
     flex-flow: row nowrap;
     text-align: left;
-    margin-bottom: 15%;
+    /*margin-bottom: 15%;*/
 }
 
 

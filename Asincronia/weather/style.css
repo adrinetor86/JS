@@ -9,7 +9,7 @@
 }
 
 #btnBuscar{
-margin-top: 20px;
+    margin-top: 20px;
     padding-left: 50px;
     padding-right:50px;
     padding-top: 10px;
@@ -24,7 +24,7 @@ padding-left: 25%;
 
 #inputCiudad{
     margin-top: 7px;
-text-align: center;
+    text-align: center;
     padding: 5px;
 }
 
@@ -32,9 +32,14 @@ label{
     letter-spacing: 4px;
 }
 
-#buscador{
+#buscador img{
+    width: 200px;
+    height: 200px;
     /*display: grid;*/
+}
 
+#buscador{
+    padding-top: 30px;
 }
 
 #contenedor{
@@ -42,25 +47,27 @@ label{
     flex-flow: column nowrap;
     text-align: center;
     align-items: center;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
+    justify-content: center;
     border-radius: 15px;
     box-shadow: 3px 4px black;
     /*width: 40%;*/
-    width: 400px;
-    height: 50vh;
+    width: 450px;
+    height: 17vh;
     background-color: #0d3349;
     color:white;
 }
+
 
 #datos{
     font-size: 1.3rem;
     display: flex;
     /*gap: 75px;*/
     width: 100%;
-
     justify-content: space-between;
     flex-flow: row nowrap;
     text-align: left;
+    margin-bottom: 15%;
 }
 
 
@@ -69,59 +76,22 @@ label{
     padding: 20px;
     /**/
     flex-flow: column nowrap;
+
 }
 
 #contenedor img{
-    height: 130px;
+    height: 180px;
     width: auto;
 
 }
 
 
-/*#divBuscadorNuevo{*/
-/*    background-image: url("img/Lupa2.png");*/
-/*    background-size: contain;*/
-/*    background-repeat: no-repeat;*/
-/*    !*background-color: white;*!*/
-/*    height: 30px;*/
-/*    width: 30px;*/
-/*    border-radius: 100%;*/
-/*}*/
 
-
-/*#div_lupa{*/
-/*    padding-left: 89%;*/
-/*    justify-content: start;*/
-/*}*/
-
-
-/*#divBuscadorNuevo:hover{*/
-
-/*    background-image: none;*/
-/*    border-radius:5px;*/
-/*    width: 200px;*/
-/*    background-color: #E74C3C;*/
-/*    !*transform: translateX(-40px);*!*/
-/*    transition: 1s;*/
-/*    margin-right: 202px;*/
-
-/*}*/
-
-
-@keyframes animacion {
-
-
-}
-
-/*#div_lupa {*/
-/*    display: flex;*/
-
-/*    position: relative;*/
-/*}*/
 #div_lupa  {
     display: flex;
     align-items: end;
     justify-content: end;
+    margin-bottom: 2%;
     gap: 15px;
     position: relative;
 }

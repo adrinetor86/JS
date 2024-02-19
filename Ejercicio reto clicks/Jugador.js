@@ -1,18 +1,24 @@
 //Clase Jugador
 class Jugador {
+    get _apellidos() {
+        return this.#_apellidos;
+    }
     #_nombre
     #_apellidos
     #_edad
     #_entrenamiento
 
-    constructor(nombre = "John", apellidos = "Doe", edad = 18) {
-        this.#_nombre = nombre;
-        this.#_apellidos = apellidos;
-        this.#_edad = edad;
-        this.#_entrenamiento = 0;
+
+    constructor(_nombre="john", _apellidos="perez", _edad="18", _entrenamiento="duro") {
+        this.#_nombre = _nombre;
+        this.#_apellidos = _apellidos;
+        this.#_edad = _edad;
+        this.#_entrenamiento = _entrenamiento;
     }
 
-    //Genero Getters y Setters
+
+
+//Genero Getters y Setters
 
     get nombre() {
         return `${this.#_nombre} ${this.#_apellidos}`;//crea un string que se suma con el siguiente automaticamente
@@ -69,4 +75,4 @@ function retirarNodos(){
 }
 */
 
-export default Jugador;
+export {Jugador};

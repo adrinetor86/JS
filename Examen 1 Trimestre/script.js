@@ -43,10 +43,11 @@ nuevaPartida.addEventListener("click",partida);
     let victoria;
     function comprobarPalabra(){
         let valorInput=inputPalabra.value;
-        
-        if(intentos>0 ){
 
-            for(let i=0;i<valorInput.length;i++){
+
+        intentos-=1;
+
+        for(let i=0;i<valorInput.length;i++){
 
             if(palabra[i]===valorInput[i]){
                 cuadroLetra[i].classList.replace("incorrect","correct")
@@ -56,27 +57,24 @@ nuevaPartida.addEventListener("click",partida);
             }else {
                 cuadroLetra[i].classList.add("incorrect")
             }
-           
+
         }
 
-        if(palabra==valorInput){
+        if(palabra === valorInput){
             botonComprobar.toggleAttribute('disabled')
             nuevaPartida.removeAttribute('disabled')
             victoria=true;
             mostrarResulado()
+
+
+            }else if(intentos===0) {
+
+            victoria = false;
+            mostrarResulado();
+            botonComprobar.toggleAttribute('disabled')
+            nuevaPartida.removeAttribute('disabled')
         }
 
-    }else{
-        
-       // console.log("INTENTOS VIsta "+intentos)
-        victoria=false;
-        mostrarResulado();
-        botonComprobar.toggleAttribute('disabled')
-        nuevaPartida.removeAttribute('disabled')
-
-    }
-    intentos-=1;
-    console.log("INTENTOS "+intentos)
 
     }
 

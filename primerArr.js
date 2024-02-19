@@ -18,7 +18,7 @@ let miVariable2=prompt("Dame numeros separados por comas:");
 let miVariable=prompt("Dime la operacion");
 miVariable2=miVariable2.split(',');
 let intResultado=1;
-if(miVariable=='suma'){
+if(miVariable==='suma'){
     intResultado=0;
     for(let i=0;i<miVariable2.length;i++){
         intResultado+=parseInt(miVariable2[i]);

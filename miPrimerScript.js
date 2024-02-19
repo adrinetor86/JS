@@ -19,7 +19,7 @@ let miComida3=prompt("Tarta o Tiramisu");
 let fotoComida=document.getElementsByTagName("img");
 let miComida1= prompt("Lentejas o Cocido").toLowerCase();
 
-if(miComida1=="lentejas"){
+if(miComida1==="lentejas"){
     fotoComida[0].setAttribute("src","fotos/lentejas.jpg")
     fotoComida[0].classList.add("imagen");
 }else{
@@ -29,7 +29,7 @@ if(miComida1=="lentejas"){
 
 let miComida2=prompt("Ternera o Cerdo").toLowerCase();
 
-if(miComida1=="ternera"){
+if(miComida1==="ternera"){
     fotoComida[1].setAttribute("src","fotos/ternera.jpg")
     fotoComida[1].classList.add("imagen");
 }else{

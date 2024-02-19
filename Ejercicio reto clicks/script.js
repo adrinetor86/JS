@@ -1,4 +1,4 @@
-import Jugador from './jugador.js';
+import {Jugador} from './jugador.js';
 
 // Array para almacenar jugadores
 let misJugadores = [];

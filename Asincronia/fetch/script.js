@@ -25,9 +25,11 @@ botonEnviar.addEventListener("click",function () {
     if(!isNaN(inputDato)){
         //POR ID
         url= "https://pokeapi.co/api/v2/pokemon/"+inputDato;
+        console.log(url)
     }else{
         //POR NOMBRE
         url= "https://pokeapi.co/api/v2/pokemon/"+inputDato;
+        console.log(url)
     }
 
     let miDevolucion = fetch(url);

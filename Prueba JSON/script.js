@@ -18,13 +18,13 @@ function comprobarCheck(){
 
     if(buscarPiloto.checked===true){
 
-        url='http://10.224.34.231:3000/pilotos';
+        url='http://192.168.56.108:3000/pilotos';
         console.log(url)
 
         return true;
     }else{
 
-        url='http://10.224.34.231:3000/escuderias'
+        url='http://192.168.56.108:3000/escuderias'
         console.log(url)
 
         return false;

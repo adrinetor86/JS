@@ -1,14 +1,14 @@
-
+import {Pokemon} from "./Pokemon.js";
 
 let btnVolver=document.getElementById("volver");
 btnVolver.setAttribute("disabled",true)
+
 let datoBuscado=document.getElementById("nombreInput");
 let checkBusqueda=document.getElementById("checkBusqueda");
 
 let btnBuscar=document.getElementById("inputBuscar");
 let arrTipos=[];
 let url;
-
 
 
 btnBuscar.addEventListener("click",mostrarDatos);
@@ -43,7 +43,6 @@ comprobrarStorage()
     }
 
         function mostrarDatos(){
-
             if(checkBusqueda.checked){
                 console.log("checked")
 
@@ -70,7 +69,6 @@ comprobrarStorage()
                     let divResultado=document.getElementById("resultados");
                     let parrafo=document.createElement("h4");
 
-                    console.log(resultado);
 
                     resetearDatos(divResultado);
                     resultado.types.forEach(function(datos){
@@ -80,12 +78,19 @@ comprobrarStorage()
                     })
                         console.log(arrTipos);
 
-                    parrafo.innerHTML=arrTipos;
+                        //CREAMOS UN OBJETO POKEMON Y LE PASAMOS LOS VALORES
+                    let pokemon=new Pokemon()
 
-                    divResultado.appendChild(document.createElement("h4")).innerHTML=resultado.name;
+                    pokemon.setNombre(resultado.name);
+                    pokemon.setType=arrTipos;
+
+                    divResultado.appendChild(document.createElement("h4")).innerHTML=pokemon.getName;
+
+                    parrafo.innerHTML=pokemon.getType;
+
                     divResultado.appendChild(parrafo)
 
-                    localStorage.setItem("pokemon",resultado.name);
+                    localStorage.setItem("pokemon",pokemon.getType);
                     comprobrarStorage();
 
                 })

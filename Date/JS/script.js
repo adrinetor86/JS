@@ -55,7 +55,7 @@ function comprobarEdad(){
     const edadMinima =568025136000;
     console.log(fechaActual)
 
-    if( fechaActual-nacimiento>=edadMinima){
+    if(fechaActual-nacimiento>=edadMinima){
 
         return true
     }else{

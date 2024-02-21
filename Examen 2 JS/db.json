@@ -1,0 +1,48 @@
+{
+    "tienda": {
+        "nombre": "FiruStore",
+        "productos": "Alimentos para perruflis",
+        "tapadera": true
+    },
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Croquetas Premium",
+            "marca": "HealthyPaws",
+            "precio": 15.99,
+            "peso": "1.5 kg",
+            "ingredientes": [
+                "pollo",
+                "arroz",
+                "zanahorias"
+            ],
+            "disponible": true
+        },
+        {
+            "id": 2,
+            "nombre": "Snack Dental",
+            "marca": "DentaBites",
+            "precio": 8.99,
+            "peso": "200 g",
+            "ingredientes": [
+                "cebada",
+                "menta"
+            ],
+            "disponible": true
+        },
+        {
+            "id": 3,
+            "nombre": "Comida Húmeda",
+            "marca": "GourmetDelight",
+            "precio": 12.5,
+            "peso": "400 g",
+            "sabor": "pollo con calabaza",
+            "disponible": false
+        }
+    ],
+    "ubicacion": {
+        "ciudad": "CiudadMascota",
+        "direccion": "Calle de los Perros, 123",
+        "telefono": "+34 123 456 789"
+    }
+}

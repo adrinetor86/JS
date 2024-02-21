@@ -1,0 +1,108 @@
+body::before{
+    content: "";
+    background-image: url('./doge.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:100%;
+    position:absolute;
+    z-index: -1;
+    opacity:0.05;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+}
+
+.disponible {
+    color: green;
+}
+
+.no-disponible {
+    color: red;
+}
+
+#contenedorFormularios {
+    display: flex;
+    flex-direction: row;  /* Alineación en fila */
+    gap: 20px;
+}
+
+.formulario {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario label {
+    text-align: left;
+    margin-right: 10px;
+}
+
+.formulario input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#campo-busqueda {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+input, button {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#cargarProductos, #cargarUltimo {
+    background-color: brown;
+}
+
+#contenedor-productos {
+    display: flex;
+    flex-direction: column;  /* Alineación en fila */
+}
+
+#contacto{
+    margin-top: 10px;
+    background-color: pink;
+    color:black;
+    font-weight: bold;
+}
+
+.incorrecto{
+    background-color:orange
+}
+
+.correcto{
+    background-color:green
+}

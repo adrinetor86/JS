@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perretes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FiruStore</h1>
+
+    <div id="contenedorFormularios">
+        <div class="formulario">
+            <h2>Usuario</h2>
+            <form id="formularioUsuario">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="cp">CP:</label>
+                <input type="text" id="cp" name="cp">
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono">
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Resetear</button>
+
+            </form>
+        </div>
+
+        <div class="formulario">
+            <h2>Búsqueda</h2>
+            <form id="formularioProducto">
+
+                <label for="producto">Nombre del producto:</label>
+                <input type="text" id="producto" name="producto">
+
+                <label for="IDProducto">ID del producto:</label>
+                <input type="text" id="IDProducto" name="IDProducto">
+
+                <button type="submit">¡Búscame!</button>
+                <button type="reset">Resetear</button>
+
+
+            </form>
+
+
+        </div>
+    </div>
+
+    <button id="contacto"> Contacto</button>
+    <button id="cargarUltimo">Cargar usuario aleatorio</button>
+
+    <div id="contenedorProductos">
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
